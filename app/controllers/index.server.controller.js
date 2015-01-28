@@ -1,5 +1,8 @@
-exports.render = function(req, res) {
+exports.renders = function(req, res) {
+
     res.render('index', {
-    	title: 'MEAN MVC'
+    	title: 'MEAN MVC',
+    	user: req.user ? req.user.username : ''
     });
 };
+
